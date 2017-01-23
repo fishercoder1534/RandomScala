@@ -1,0 +1,14 @@
+language: scala
+scala:
+   - 2.9.3
+   - 2.10.4
+   - 2.11.2
+
+script: ./build.sh
+
+notifications:
+  email:
+    recipients:
+      - fishercoder@gmail.com
+    on_success: always
+    on_failure: always
