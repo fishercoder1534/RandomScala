@@ -2,12 +2,13 @@ language: scala
 
 scala:
    - 2.10.4
+   #2.12.1 doesn't work on Travis CI which is the version I use on my local machine
 
 jdk:
   - openjdk7
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION test
+  - sbt ++$TRAVIS_SCALA_VERSION run
 
 notifications:
   email:
