@@ -8,6 +8,9 @@ jdk:
 
 script:
   - sbt ++$TRAVIS_SCALA_VERSION test
+  - sbt compile
+  - sbt package
+  - sbt run
 
 notifications:
   email:
