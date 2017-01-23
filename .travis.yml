@@ -1,16 +1,13 @@
 language: scala
 
 scala:
-   - 2.10.4
+   - 2.12.1
 
 jdk:
   - openjdk7
 
 script:
   - sbt ++$TRAVIS_SCALA_VERSION test
-  - sbt compile
-  - sbt package
-  - sbt run
 
 notifications:
   email:
