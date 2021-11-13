@@ -8,4 +8,4 @@ This post helps: http://stackoverflow.com/questions/4250318/how-to-create-sbt-pr
 
 2. git clone this repo into your local machine
 
-3. File -> New -> Project -> SBT -> change Project location to where you cloned this repo -> Finish!
+3. File -> New -> Project -> Scala -> SBT -> change Project location to where you cloned this repo -> Finish!
