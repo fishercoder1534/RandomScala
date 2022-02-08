@@ -60,4 +60,21 @@ object Recursion extends App {
   }
   println(isPrime(23))
   println(isPrime(22))
+
+  def fibonacci(n: Int): Int = {
+    @tailrec
+    def fiboTail(i: Int, j: Int, k: Int): Int = {
+      if (i >= n) j
+      else fiboTail(i + 1, j + k, j)
+    }
+
+    if (n <= 2) 1
+    else fiboTail(2, 1, 1)
+  }
+
+//  1, 1, 2, 3, 5, 8, 13, 21
+  println(fibonacci(5))
+  println(fibonacci(6))
+  println(fibonacci(7))
+  println(fibonacci(8))
 }
