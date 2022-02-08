@@ -50,10 +50,14 @@ object Recursion extends App {
     def isPrimeTailRecursion(t: Int, isStillPrime: Boolean): Boolean = {
       if (!isStillPrime) false
       else if (t <= 1) true
-      else isPrimeTailRecursion(t - 1, n % t != 0 && isStillPrime)
+      else {
+        println("Computing isPrime for ", t, " I first need: ", t - 1)
+        isPrimeTailRecursion(t - 1, n % t != 0 && isStillPrime)
+      }
     }
 
     isPrimeTailRecursion(n / 2, true)
   }
   println(isPrime(23))
+  println(isPrime(22))
 }
