@@ -8,11 +8,13 @@ object MethodNotations extends App {
 //      yes, surprsingly, you could use + to name a function!!!
       s"${this.name} is hanging out with ${person.name} using plus operator as method name."
     }
+    def +(nickName: String): Person = new Person(s"${this.name}, ($nickName)", favoriteMovie)
     def unary_! : String = {
       val x = s"What the heck is ${this.name}?"
       println(x)
       x
     }
+
     def isAlive: Boolean = true
     def apply(): String = s"Hi there, my name is ${this.name} and I like ${this.favoriteMovie}."
   }
@@ -47,4 +49,7 @@ object MethodNotations extends App {
 //  apply
   println(mary.apply())
   println(mary()) //this is equivalent to the above
+
+  println((mary + "The Rock Star")())
+  println((mary + "The Rock Star").apply())
 }
