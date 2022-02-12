@@ -41,4 +41,9 @@ object AbstractDataTypes extends App {
   crocodile.eat(dog)
   println(crocodile.preferredMeal)
   println(crocodile.characteristics)
+
+//  scala.Null doesn't inherit anything
+//  anything else inherits from scala.Any
+//  scala.Nothing inherits everything
+
 }
