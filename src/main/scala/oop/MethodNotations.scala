@@ -20,6 +20,8 @@ object MethodNotations extends App {
 
     def learns(thing: String) = s"$name is learning $thing"
     def learnsScala = this learns "Scala"
+
+    def apply(n: Int): String = s"$name watched $favoriteMovie $n times."
   }
 
   val mary = new Person("Mary", "Inception")
@@ -59,4 +61,5 @@ object MethodNotations extends App {
   println((+mary).age) //this is instantiating a new person object
 
   println(mary learnsScala) //postfix notation, equals to mary.learnsScala
+  println(mary(10))
 }
