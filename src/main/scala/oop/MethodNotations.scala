@@ -58,8 +58,12 @@ object MethodNotations extends App {
   println((mary + "The Rock Star")())
   println((mary + "The Rock Star").apply())
 
-  println((+mary).age) //this is instantiating a new person object
+  println(
+    (+mary).age
+  ) //this is instantiating a new person object, this is also called prefix notation, only allowed for +,-,! and ~
 
-  println(mary learnsScala) //postfix notation, equals to mary.learnsScala
+  println(
+    mary learnsScala
+  ) //postfix notation, equals to mary.learnsScala, only available for methods with no parameters, we can call them with a space in between
   println(mary(10))
 }
