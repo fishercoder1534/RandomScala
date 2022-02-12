@@ -17,6 +17,9 @@ object MethodNotations extends App {
     def unary_+ : Person = new Person(name, favoriteMovie, age + 1)
     def isAlive: Boolean = true
     def apply(): String = s"Hi there, my name is ${this.name} and I like ${this.favoriteMovie}."
+
+    def learns(thing: String) = s"$name is learning $thing"
+    def learnsScala = this learns "Scala"
   }
 
   val mary = new Person("Mary", "Inception")
@@ -54,4 +57,6 @@ object MethodNotations extends App {
   println((mary + "The Rock Star").apply())
 
   println((+mary).age) //this is instantiating a new person object
+
+  println(mary learnsScala) //postfix notation, equals to mary.learnsScala
 }
