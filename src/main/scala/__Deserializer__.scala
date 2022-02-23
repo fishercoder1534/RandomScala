@@ -1,7 +1,4 @@
-/**
-  * Created by fishercoder1534 on 1/22/17.
-  */
-object __Deserializer__ {
+object __Deserializer__ extends App {
   def toInteger(line: String): Int = {
     try {
       line.toInt
@@ -9,5 +6,8 @@ object __Deserializer__ {
       case e: Exception => 0
     }
   }
+
+  println(toInteger("123"))
+  println(toInteger("This is a cool line."))
 
 }
